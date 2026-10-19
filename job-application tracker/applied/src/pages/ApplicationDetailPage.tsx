@@ -9,7 +9,7 @@ export function ApplicationDetailPage() {
 
   if (loading) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
+      <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
         <p className="text-sm text-slate-500">Loading…</p>
       </main>
     );
@@ -17,7 +17,7 @@ export function ApplicationDetailPage() {
 
   if (error) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
+      <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
         <p className="text-sm font-semibold text-rose-700">
           Something went wrong loading this application.
         </p>
@@ -30,7 +30,7 @@ export function ApplicationDetailPage() {
 
   if (!application) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
+      <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
         <h1 className="text-2xl font-bold">Application not found</h1>
         <p className="mt-2 text-sm text-slate-600">
           No application with id “{id}” exists.
@@ -43,7 +43,7 @@ export function ApplicationDetailPage() {
   }
 
   return (
-    <main className="mx-auto max-w-2xl p-6">
+    <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
       <Link to="/" className="text-sm text-blue-600 hover:underline">
         ← Back to all applications
       </Link>

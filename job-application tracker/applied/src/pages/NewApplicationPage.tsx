@@ -30,13 +30,13 @@ export function NewApplicationPage() {
   }
 
   return (
-    <main className="mx-auto max-w-2xl p-6">
+    <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
       <h1 className="mb-6 text-2xl font-bold">Add an application</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
   {/* company — as you have it */}
 <div>
-  <label htmlFor="company" className="block text-sm font-medium">
+  <label htmlFor="company" className="block text-sm font-medium dark:text-slate-100">
     Company
   </label>
   <input
@@ -59,7 +59,7 @@ export function NewApplicationPage() {
 
   {/* role — same shape as company, name changed */}
   <div>
-    <label htmlFor="role" className="block text-sm font-medium">
+    <label htmlFor="role" className="block text-sm font-medium dark:text-slate-100">
       Job title
     </label>
     <input
@@ -82,7 +82,7 @@ export function NewApplicationPage() {
 
   {/* link — same shape, with URL validate */}
   <div>
-    <label htmlFor="link" className="block text-sm font-medium">
+    <label htmlFor="link" className="block text-sm font-medium dark:text-slate-100">
       Link to the advert (optional)
     </label>
     <input
@@ -112,7 +112,7 @@ export function NewApplicationPage() {
 
   {/* dateSent — date input, not in future */}
   <div>
-    <label htmlFor="dateSent" className="block text-sm font-medium">
+    <label htmlFor="dateSent" className="block text-sm font-medium dark:text-slate-100">
       Date sent
     </label>
     <input
@@ -138,14 +138,14 @@ export function NewApplicationPage() {
 
   {/* stage — wrapped and labelled */}
   <div>
-    <label htmlFor="stage" className="block text-sm font-medium">
+    <label htmlFor="stage" className="block text-sm font-medium dark:text-slate-100">
       Stage
     </label>
     <select
       id="stage"
       aria-invalid={errors.stage ? "true" : "false"}
       aria-describedby={errors.stage ? "stage-error" : undefined}
-      className="mt-1 w-full rounded-md border px-3 py-2"
+      className="mt-1 w-full rounded-md border px-3 py-2 dark:text-slate-500"
       {...register("stage")}
     >
       <option value="wishlist">Saved</option>
@@ -159,7 +159,7 @@ export function NewApplicationPage() {
 
   {/* notes — wrapped and labelled */}
   <div>
-    <label htmlFor="notes" className="block text-sm font-medium">
+    <label htmlFor="notes" className="block text-sm font-medium dark:text-slate-100">
       Notes (optional)
     </label>
     <textarea
@@ -172,7 +172,7 @@ export function NewApplicationPage() {
   </div>
 
   {/* buttons — as you have them */}
-  <div className="flex gap-3 pt-2">
+  <div className="flex gap-3 pt-2 dark:text-slate-100">
   <button
     type="submit"
     disabled={isSubmitting}
@@ -183,7 +183,7 @@ export function NewApplicationPage() {
   <button
     type="button"
     onClick={() => navigate("/")}
-    className="rounded-md border px-4 py-2 text-sm font-semibold"
+    className="rounded-md border px-4 py-2 text-sm font-semibold dark:text-slate-100"
   >
     Cancel
   </button>

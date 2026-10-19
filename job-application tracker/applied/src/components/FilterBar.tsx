@@ -39,13 +39,13 @@ export function FilterBar({
         onChange={(e) => onSearchChange(e.target.value)}
         placeholder="Search company or job title…"
         aria-label="Search applications"
-        className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm"
+        className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700"
       />
       <select
         value={stage}
         onChange={(e) => onStageChange(e.target.value as Stage | "all")}
         aria-label="Filter by stage"
-        className="rounded-md border border-slate-300 px-3 py-2 text-sm"
+        className="rounded-md border border-slate-300 px-3 py-2 text-sm dark:text-slate-100 dark:bg-slate-800 dark:border-slate-700"
       >
         <option value="all">All stages</option>
         {stageOrder.map((s) => (

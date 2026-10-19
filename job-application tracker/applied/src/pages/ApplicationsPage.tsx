@@ -22,7 +22,7 @@ export function ApplicationsPage() {
 
   if (loading) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
+      <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
         <h1 className="mb-6 text-2xl font-bold">Applied</h1>
         <p className="text-sm text-slate-500">Loading…</p>
       </main>
@@ -31,7 +31,7 @@ export function ApplicationsPage() {
 
   if (error) {
     return (
-      <main className="mx-auto max-w-2xl p-6">
+      <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
         <h1 className="mb-6 text-2xl font-bold">Applied</h1>
         <p className="text-sm font-semibold text-rose-700">
           Something went wrong loading your applications.
@@ -43,8 +43,8 @@ export function ApplicationsPage() {
 
   return (
     
-  <main className="mx-auto max-w-2xl p-6">
-    <h1 className="mb-6 text-2xl font-bold">Applied</h1>
+  <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
+    <h1 className="mb-6 text-2xl font-bold dark:text-slate-100">Applied</h1>
     <StageSummary applications={applications} />
     <div className="mt-4">
       <FilterBar
@@ -54,7 +54,7 @@ export function ApplicationsPage() {
         onStageChange={setStage}
       />
     </div>
-    <div className="mt-6">
+    <div className="mt-6 dark:text-slate-100 dark:text-slate-100">
       {applications.length === 0 ? (
         <p>You haven't added anything yet.</p>
       ) : filtered.length === 0 ? (

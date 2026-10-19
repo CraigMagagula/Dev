@@ -4,12 +4,12 @@ import { Link } from "react-router";
 
 export function NotFoundPage() {
   return (
-    <main className="mx-auto max-w-2xl p-6">
+    <main className="mx-auto max-w-2xl p-6 dark:text-slate-100">
       <h1 className="text-2xl font-bold">Page not found</h1>
       <p className="mt-2 text-sm text-slate-600">
         That address does not match anything in this app.
       </p>
-      <Link to="/" className="mt-4 inline-block text-blue-600 hover:underline">
+      <Link to="/" className="mt-4 inline-block text-blue-600 hover:underline  dark:text-slate-100">
         Back to all applications
       </Link>
     </main>
